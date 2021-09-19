@@ -136,4 +136,15 @@ def total_grupo(todo_el_grupo, hombres, mujeres):
     print(f'El promedio de edad de los hombres es: {total_hombres}')
     print(f'El promedio de edad de las mujeres es: {total_mujeres}')
 total_grupo(4, 2, 2)
- 
+
+# Ejercicio 5
+def total_numeros(conjunto_numeros):
+    import math
+    menor = math.inf
+    for x in range(conjunto_numeros):
+        numero = float(input(f'Digite el número {x+1}: '))
+        if(numero < menor):
+            menor = numero
+    print(f'El número menor es: {menor}')
+total_numeros(3)
+            
