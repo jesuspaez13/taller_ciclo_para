@@ -90,3 +90,19 @@ def animales(elefantes, jirafas, chimpances):
         print(f'El porcentaje de chimpancés entre 1 y 3 años es: {porcentaje2}')
         print(f'El porcentaje de chimpancés de 3 ó más años es: {porcentaje3}')
 animales(20, 15, 40)
+
+# Ejercicio 3
+def numero_obreros(obreros):
+    if(obreros > 0):
+        for x in range(obreros):
+            horas = int(input(f'Digite las horas trabajadas del obrero {x + 1}: '))
+            if(horas <= 40):
+                salario = horas * 20
+                print(f'El salario del obrero es: {salario}')
+            elif(horas > 40):
+                sub_salario = horas - 40
+                salario = (sub_salario * 25) + 800
+                print(f'El salario del obrero es: {salario}')
+    else:
+        print('El número de obreros es equivocado')
+numero_obreros(3)
