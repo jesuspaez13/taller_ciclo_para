@@ -106,3 +106,34 @@ def numero_obreros(obreros):
     else:
         print('El número de obreros es equivocado')
 numero_obreros(3)
+
+# Ejercicio 4
+def total_grupo(todo_el_grupo, hombres, mujeres):
+    promedio_grupo = 0
+    promedio_hombres = 0
+    promedio_mujeres = 0
+    for x in range(todo_el_grupo):
+        edad = int(input(f'Digite la edad del alumno {x+1}: '))
+        sexo = str(input(f'Digite si es hombre o mujer el alumno {x+1}: '))
+        if(sexo == 'hombre' or sexo == 'mujer'):
+            promedio_grupo = promedio_grupo + edad
+            promedio_grupo = round(promedio_grupo, 2)
+            total_grupos = promedio_grupo / todo_el_grupo
+            #print(f'El promedio de edad de todo el grupo es: {total_grupos}')
+            if(sexo == 'hombre'):
+                promedio_hombres = promedio_hombres + edad
+                promedio_hombres = round(promedio_hombres, 2)
+                total_hombres = promedio_hombres / hombres
+                #print(f'El promedio de edad de los hombres es: {total_hombres}')
+            elif(sexo == 'mujer'):
+                promedio_mujeres = promedio_mujeres + edad
+                promedio_mujeres = round(promedio_mujeres, 2)
+                total_mujeres = promedio_mujeres / mujeres
+                #print(f'El promedio de edad de las mujeres es: {total_mujeres}')
+        else:
+            print('El sexo ingresado es equivocado')
+    print(f'El promedio de edad de todo el grupo es: {total_grupos}')
+    print(f'El promedio de edad de los hombres es: {total_hombres}')
+    print(f'El promedio de edad de las mujeres es: {total_mujeres}')
+total_grupo(4, 2, 2)
+ 
