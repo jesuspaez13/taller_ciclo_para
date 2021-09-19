@@ -31,3 +31,62 @@ def variable(cantidad_autos):
     print(f'Total de carros con calcomanía verde: {verde}')
     print(f'Total de carros con calcomanía azul: {azul}')
 variable(3)
+
+# Ejercicio 2
+def animales(elefantes, jirafas, chimpances):
+    Raza_animal = str(input('Digite el animal que se va a estudiar: '))
+    rango_edad_uno = 0
+    rango_edad_dos = 0
+    rango_edad_tres = 0
+    if(Raza_animal == 'elefante'):
+        for x in range(elefantes):
+            edad = int(input(f'Digite la edad {x+1}: '))
+            if(edad >= 0 and edad <= 1):
+                rango_edad_uno = rango_edad_uno + 1
+                porcentaje1 = (rango_edad_uno * 100) / 20
+            elif(edad > 1 and edad < 3):
+                rango_edad_dos = rango_edad_dos + 1
+                porcentaje2 = (rango_edad_dos * 100) / 20
+            elif(edad >= 3):
+                rango_edad_tres = rango_edad_tres + 1
+                porcentaje3 = (rango_edad_tres * 100) / 20
+            else:
+                print('La edad ingresada es equivocada')
+        print(f'El porcentaje de elefantes entre 0 y 1 años es: {porcentaje1}')
+        print(f'El porcentaje de elefantes entre 1 y 3 años es: {porcentaje2}')
+        print(f'El porcentaje de elefantes de 3 ó más años es: {porcentaje3}')
+    if(Raza_animal == 'jirafa'):
+        for x in range(jirafas):
+            edad = int(input(f'Digite la edad {x+1}: '))
+            if(edad >= 0 and edad <= 1):
+                rango_edad_uno = rango_edad_uno + 1
+                porcentaje1 = (rango_edad_uno * 100) / 15
+            elif(edad > 1 and edad < 3):
+                rango_edad_dos = rango_edad_dos + 1
+                porcentaje2 = (rango_edad_dos * 100) / 15
+            elif(edad >= 3):
+                rango_edad_tres = rango_edad_tres + 1
+                porcentaje3 = (rango_edad_tres * 100) / 15
+            else:
+                print('La edad ingresada es equivocada')
+        print(f'El porcentaje de jirafas entre 0 y 1 años es: {porcentaje1}')
+        print(f'El porcentaje de jirafas entre 1 y 3 años es: {porcentaje2}')
+        print(f'El porcentaje de jirafas de 3 ó más años es: {porcentaje3}')
+    if(Raza_animal == 'chimpance'):
+        for x in range(chimpances):
+            edad = int(input(f'Digite la edad {x+1}: '))
+            if(edad >= 0 and edad <= 1):
+                rango_edad_uno = rango_edad_uno + 1
+                porcentaje1 = (rango_edad_uno * 100) / 40
+            elif(edad > 1 and edad < 3):
+                rango_edad_dos = rango_edad_dos + 1
+                porcentaje2 = (rango_edad_dos * 100) / 40
+            elif(edad >= 3):
+                rango_edad_tres = rango_edad_tres + 1
+                porcentaje3 = (rango_edad_tres * 100) / 40
+            else:
+                print('La edad ingresada es equivocada')
+        print(f'El porcentaje de chimpancés entre 0 y 1 años es: {porcentaje1}')
+        print(f'El porcentaje de chimpancés entre 1 y 3 años es: {porcentaje2}')
+        print(f'El porcentaje de chimpancés de 3 ó más años es: {porcentaje3}')
+animales(20, 15, 40)
