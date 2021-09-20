@@ -160,3 +160,17 @@ def total_mienbros(mienbros):
     if(peso_antiguo - peso > 0):
         print("El miembro subió: ", peso_antiguo - (peso / 10), "kilos")
 total_mienbros(5) 
+
+# Ejercicio 7
+def supermercado(numero_de_productos):
+    total = 0
+    for x in range(numero_de_productos):
+        precio = int(input(f'Digite el precio del producto {x+1}: '))
+        if(precio > 1):
+            cantidad = int(input('Digite que cantidad va llevar: '))
+            sub_total = precio * cantidad
+            total = total + sub_total
+        else:
+            precio = 0
+    print(f'El total de la compra es: {total}')
+supermercado(2)
