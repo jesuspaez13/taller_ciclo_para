@@ -147,4 +147,16 @@ def total_numeros(conjunto_numeros):
             menor = numero
     print(f'El número menor es: {menor}')
 total_numeros(3)
-            
+
+# Ejercicio 6
+def total_mienbros(mienbros):
+    peso = 0
+    for x in range(mienbros):
+        peso_antiguo = int(input(f'Digite el peso antiguo de la persona {x+1}: ')) 
+    for p in range(10):
+        peso = int(input(f'Digite el peso de la báscula {p+1}: '))   
+    if(peso_antiguo - peso < 0):
+        print("El miembro bajó: ", peso_antiguo - (peso / 10), "kilos")
+    if(peso_antiguo - peso > 0):
+        print("El miembro subió: ", peso_antiguo - (peso / 10), "kilos")
+total_mienbros(5) 
