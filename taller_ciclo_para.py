@@ -174,3 +174,38 @@ def supermercado(numero_de_productos):
             precio = 0
     print(f'El total de la compra es: {total}')
 supermercado(2)
+
+# Ejercicio 8
+def personas(numero_de_personas):
+    precio_boleta = int(input("Digite el precio de la boleta "))
+    num_personas = int(input("digite el número de personas "))
+    rango_edad_1 = 0
+    rango_edad_2 = 0
+    rango_edad_3 = 0
+    rango_edad_4 = 0
+    rango_edad_5 = 0
+    for x in range(numero_de_personas):
+        edad = int(input(f'Digite la edad de la persona {x+1}: '))
+        if edad < 5:
+            print("Los niños menores de 5 años no pueden entrar")
+        if edad > 5 and edad <= 14:
+            rango_edad_1 += 1
+        if edad > 15 and edad <= 19:
+            rango_edad_2 += 1
+        if edad > 20 and edad <= 45:
+            rango_edad_3 += 1
+        if edad > 46 and edad <= 65:
+            rango_edad_4 += 1
+        if edad > 66:
+            rango_edad_5 += 1
+    print('El dinero no percibido por el descuento en la categoría 5-14 es: ',
+          rango_edad_1*precio_boleta*0.35)
+    print('El dinero no percibido por el descuento en la categoría 15-20 es: ',
+          rango_edad_2*precio_boleta*0.25)
+    print('El dinero no percibido por el descuento en la categoría 20-45 es: ',
+          rango_edad_3*precio_boleta*0.10)
+    print('El dinero no percibido por el descuento en la categoría 46-65 es: ',
+          rango_edad_4*precio_boleta*0.25)
+    print('El dinero no percibido por el descuento en la categoría 66-adelante es: ',
+          rango_edad_5*precio_boleta*0.35)
+personas(2)
