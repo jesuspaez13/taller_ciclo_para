@@ -209,3 +209,19 @@ def personas(numero_de_personas):
     print('El dinero no percibido por el descuento en la categoría 66-adelante es: ',
           rango_edad_5*precio_boleta*0.35)
 personas(2)
+
+# Ejercicio 9
+def empleados(numero_de_empleados):
+    for x in range(numero_de_empleados):
+        venta = int(input(f'Digite cuanto vendío el empleado {x+1}: '))
+        if(venta < 20):
+            print("La comisión del empleado es de ", venta*0.1)
+        if(venta < 40 and venta > 20):
+            print("La comisión del empleado es de ", venta*0.15)
+        if(venta < 80 and venta >= 40):
+            print("La comisión del empleado es de ", venta*0.20)
+        if(venta < 160 and venta >= 80):
+            print("La comisión del empleado es de ", venta*0.25)
+        if(venta > 160):
+            print("La comisión del empleado es de ", venta*0.30)
+empleados(100)
