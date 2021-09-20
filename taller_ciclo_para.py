@@ -178,7 +178,6 @@ supermercado(2)
 # Ejercicio 8
 def personas(numero_de_personas):
     precio_boleta = int(input("Digite el precio de la boleta "))
-    num_personas = int(input("digite el número de personas "))
     rango_edad_1 = 0
     rango_edad_2 = 0
     rango_edad_3 = 0
@@ -225,3 +224,29 @@ def empleados(numero_de_empleados):
         if(venta > 160):
             print("La comisión del empleado es de ", venta*0.30)
 empleados(100)
+
+# Ejercicio 10
+def encuestas(votantes):
+    candidato_uno = 0
+    candidato_dos = 0
+    candidato_tres = 0
+    ganador = 0
+    for x in range(votantes):
+        voto = int(input(f'Votante {x+1}, digite el numero del candidato a votar: '))
+        if voto == 1:
+            candidato_uno += 1
+        if voto == 2:
+            candidato_dos += 1
+        if voto == 3:
+            candidato_tres += 1
+    if candidato_uno > candidato_dos and candidato_uno > candidato_tres:
+        ganador = 1
+    if candidato_dos > candidato_uno and candidato_dos > candidato_tres:
+        ganador = 2
+    if candidato_tres > candidato_uno and candidato_tres > candidato_dos:
+        ganador = 3
+    print(f'Votos del primer candidato: {candidato_uno}')
+    print(f'Votos del segundo candidato: {candidato_dos}')
+    print(f'Votos del tercer candidato: {candidato_tres}')
+    print(f'El ganador es: {ganador}')
+encuestas(50000)
